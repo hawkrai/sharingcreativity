@@ -1,5 +1,5 @@
-sharerecord
+sharingcreativity
 ===========
 
-Share Record
-website for sharing records
+Sharing Creativity
+website for sharing creativity
