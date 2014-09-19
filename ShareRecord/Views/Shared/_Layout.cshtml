@@ -1,44 +1,81 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+<body class="container-wrapper">
+	<header class="header">
+		<a href="/" class="logo navbar-brand">
+			Sharing Creativity
+		</a>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			
+			
+			<ul class="nav navbar-nav" style="margin-top: 5px; margin-top: -8px;height: 50px">
+				<li>
+					<a href="#" id="menu-toggle">
+						<i class="fa fa-reorder fa-2x" style="color: #b2dbfb;"></i>
+					</a>
+				</li>
+			</ul>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 5px; margin-top: -8px;height: 50px">
+				
+				<li class="dropdown messages-menu" style="height: 60px;">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-envelope fa-2x" style="vertical-align: middle;"></i>
+						<span class="label label-success">4</span>
+					</a>
+					<ul class="dropdown-menu" style="padding: 10px">
+						<li class="header">You have 4 messages</li>
+						<li>
+						</li>
+						<li class="footer"><a href="#">See All Messages</a></li>
+					</ul>
+				</li>
+				<li class="dropdown notifications-menu" style="height: 60px;">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-warning fa-2x" style="vertical-align: middle;"></i>
+						<span class="label label-warning">10</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li class="header">You have 10 notifications</li>
+						<li>
+						</li>
+						<li class="footer"><a href="#">View all</a></li>
+					</ul>
+				</li>
+				<li class="dropdown" style="margin-right: 20px; height: 60px;">
+					<a href="" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-user fa-2x" style="vertical-align: middle;"></i>  hawkrai<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-power-off"></i> Выйти</a></li>
+					</ul>
+	
+				</li>
+
+			</ul>
+				
+		</nav>
+	</header>
+	<div class="container body-content container-wrapper">
+		@RenderSection("scripts", required: false)
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year - SharingCreativity</p>
+		</footer>
+	</div>
+
+
+
+
 </body>
 </html>
