@@ -86,9 +86,39 @@ header {
 }
 
 .container-wrapper {
-	max-width: 768px;
+	min-width: 300px;
 	margin: auto;
 }
+
+@media (min-width: 320px) {
+  .container-wrapper {
+    width: 300px;
+  }
+}
+
+
+@media (min-width: 480px) {
+  .container-wrapper {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-wrapper {
+    width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .container-wrapper {
+    width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-wrapper {
+    width: 1000px;
+  }
+}
+
 
 .navbar-nav > .user-menu > .dropdown-menu > li.user-header {
 	height: 175px;
