@@ -21,12 +21,19 @@ namespace ShareRecord
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+					  "~/Scripts/raphael-min.js",
+					  "~/Scripts/application/app.js"));
+
+	        bundles.Add(new StyleBundle("~/Content/bootstrap-slider").Include(
+		        "~/Content/bootstrap-slider/slider.css"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
 					  "~/Content/font-awesome.css",
-                      "~/Content/site.css"));
+					  "~/Content/ionic.css",
+					  "~/Contentjvectormap/jquery-jvectormap-1.2.2.css",
+                      "~/Content/main.css"));
         }
     }
 }
